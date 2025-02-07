@@ -1,4 +1,4 @@
-# injXSS.sh
+# injXSS
 injXSS.sh is a powerful and comprehensive payload generator designed for penetration testers and security researchers. This script provides a categorized and detailed collection of payloads for web security testing, covering SQL Injection, XSS, JavaScript Injection, HTML Injection, Phishing, Command/System Injection. It’s an indispensable tool for identifying and exploiting vulnerabilities in web applications and server configurations.
 
 Features
